@@ -58,6 +58,19 @@ def deplacement_possible(Map, coord):
         return False
     else:
         return True
+    
+# Affichage du jeu
+color = {' ': (0,0,0) , '.': (255,255,255), '-': (255,54,4), '#': (118,117,117),
+         '@': (255,255,255), '=': (0,255,0), '+': (138,64,0)}
+
+# On initialise pygame
+pygame.init()
+
+# Affichage de l'écran
+
+screen = pygame.display.set_mode((board_width*pix_width, board_height*pix_height))
+
+
 
 while running:
     for event in pygame.event.get():
