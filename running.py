@@ -29,7 +29,6 @@ def convertisseur(chemin) :
 
 Map = convertisseur(r"C:\Users\Utilisateur\Desktop\Python\hackathon\Map1.csv")
 
-for i in len(Map)
 
 # la taille du jeu en nombre de cellules
 board_size = (len(Map[0,:]), len(Map[:,0]))
@@ -54,13 +53,13 @@ def bouger_perso(Map, coord, di, dj):
         coord = new_coord
     
 def deplacement_possible(Map, coord):
-    if Map[coord[0]][coord[1]] == "-" or Map[coord[0]][coord[1]] == "|" or Map[coord[0]][coord[1]] == " ":
+    if Map[coord[0]][coord[1]] == "-" or Map[coord[0]][coord[1]] == "":
         return False
     else:
         return True
     
 # Affichage du jeu
-color = {' ': (0,0,0) , '.': (255,255,255), '-': (255,54,4), '#': (118,117,117),
+color = {'': (0,0,0) , '.': (255,255,255), '-': (255,54,4), '#': (118,117,117),
          '@': (255,255,255), '=': (0,255,0), '+': (138,64,0)}
 
 # On initialise pygame
